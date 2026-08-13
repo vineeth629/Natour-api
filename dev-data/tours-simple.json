@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "The Forest Hiker",
+    "duration": 5,
+    "difficulty": "easy",
+    "price": 397,
+    "summary": "A beautiful hike through the forest with amazing views.",
+    "description": "Explore peaceful forest trails and enjoy the natural beauty of the mountains.",
+    "imageCover": "tour-1-cover.jpg"
+  },
+  {
+    "id": 2,
+    "name": "The Sea Explorer",
+    "duration": 7,
+    "difficulty": "medium",
+    "price": 497,
+    "summary": "Explore the beautiful coastline and hidden beaches.",
+    "description": "A fantastic adventure along the coast with opportunities to explore beaches and cliffs.",
+    "imageCover": "tour-2-cover.jpg"
+  },
+  {
+    "id": 3,
+    "name": "The Mountain Climber",
+    "duration": 10,
+    "difficulty": "difficult",
+    "price": 897,
+    "summary": "A challenging climb through the beautiful mountains.",
+    "description": "Experience an exciting mountain adventure with steep climbs and breathtaking views.",
+    "imageCover": "tour-3-cover.jpg"
+  },
+  {
+    "id": 4,
+    "name": "The Snow Adventurer",
+    "duration": 6,
+    "difficulty": "medium",
+    "price": 697,
+    "summary": "Discover snowy mountains and frozen landscapes.",
+    "description": "Enjoy a thrilling journey through snow-covered mountains and beautiful winter scenery.",
+    "imageCover": "tour-4-cover.jpg"
+  },
+  {
+    "id": 5,
+    "name": "The Desert Explorer",
+    "duration": 4,
+    "difficulty": "easy",
+    "price": 297,
+    "summary": "Experience the beauty and silence of the desert.",
+    "description": "Travel through golden sand dunes and discover the unique landscape of the desert.",
+    "imageCover": "tour-5-cover.jpg"
+  },
+  {
+    "id": 6,
+    "name": "The Waterfall Adventure",
+    "duration": 3,
+    "difficulty": "easy",
+    "price": 247,
+    "summary": "A relaxing hike to a spectacular waterfall.",
+    "description": "Walk through lush green forests and reach a beautiful hidden waterfall.",
+    "imageCover": "tour-6-cover.jpg"
+  },
+  {
+    "id": 7,
+    "name": "The Jungle Safari",
+    "duration": 8,
+    "difficulty": "medium",
+    "price": 597,
+    "summary": "Explore the jungle and discover amazing wildlife.",
+    "description": "Experience an exciting jungle safari and observe wildlife in its natural habitat.",
+    "imageCover": "tour-7-cover.jpg"
+  },
+  {
+    "id": 8,
+    "name": "The Volcano Trek",
+    "duration": 12,
+    "difficulty": "difficult",
+    "price": 997,
+    "summary": "A challenging trek around a spectacular volcano.",
+    "description": "Take on a demanding volcanic trek with incredible landscapes and unforgettable views.",
+    "imageCover": "tour-8-cover.jpg"
+  }
+]
