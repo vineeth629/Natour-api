@@ -11,14 +11,22 @@ app.get('/',(req,res)=>{
 const tours = JSON.parse(
     fs.readFileSync(`${__dirname}/dev-data/tours-simple.json`)
 );
-app.get('/api/v1/tours/:id/:x/:y?',(req,res)=>{///: specifies the variable in url ? indicates optional parameters which need not be always included in route 
+app.get('/api/v1/tours/:id/',(req,res)=>{///: specifies the variable in url ? indicates optional parameters which need not be always included in route 
     console.log(req.params);//this prints all the parameters in url route
+    const id = req.params.id*1;//js just converts the string to no when performing arithmetic operationon it 
+    if(id>tours.length){
+        return res.status(404).json({
+            status : "Fail",
+            message : "Inavlid id"
+        });
+    };
+    const tour = tours.find(el =>el.id === id);//=== is the comparison operator
     res.status(200).json({
    
-        //status : 'success',
+        status : 'success',
         //results : tours.length,//tours is a array so it make sense 
         data:{
-            tours
+            tour
         }
     })
 })
