@@ -47,6 +47,21 @@ app.post('/api/v1/tours',(req,res)=>{
         })
     })
 })
+app.patch('/api/v1/tours/:id',(req,res)=>{
+    const id = req.params.id*1;
+     if(id>tours.length){
+        return res.status(404).json({
+            status : "Fail",
+            message : "Inavlid id"
+        });
+    }
+    res.status(200).json({
+        status : 'Success',
+        data :{
+            tour : "Updated data here..."
+        }
+    })
+})
 const port = 3000;
 app.listen(port,()=>{//for sending the request
     console.log(`App running on ${port}`);
