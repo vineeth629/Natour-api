@@ -11,10 +11,12 @@ app.get('/',(req,res)=>{
 const tours = JSON.parse(
     fs.readFileSync(`${__dirname}/dev-data/tours-simple.json`)
 );
-app.get('/api/v1/tours',(req,res)=>{
+app.get('/api/v1/tours/:id/:x/:y?',(req,res)=>{///: specifies the variable in url ? indicates optional parameters which need not be always included in route 
+    console.log(req.params);//this prints all the parameters in url route
     res.status(200).json({
-        status : 'success',
-        results : tours.length,//tours is a array so it make sense 
+   
+        //status : 'success',
+        //results : tours.length,//tours is a array so it make sense 
         data:{
             tours
         }
