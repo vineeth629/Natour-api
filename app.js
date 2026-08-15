@@ -11,6 +11,10 @@ app.get('/',(req,res)=>{
 const tours = JSON.parse(
     fs.readFileSync(`${__dirname}/dev-data/tours-simple.json`)
 );
+app.use((req,res,next)=>{
+    req.requestTime = new Date().toISOString();
+    next();//always ensure to call next()
+})
 app.get('/api/v1/tours/:id/',(req,res)=>{///: specifies the variable in url ? indicates optional parameters which need not be always included in route 
     console.log(req.params);//this prints all the parameters in url route
     const id = req.params.id*1;//js just converts the string to no when performing arithmetic operationon it 
@@ -25,6 +29,7 @@ app.get('/api/v1/tours/:id/',(req,res)=>{///: specifies the variable in url ? in
    
         status : 'success',
         //results : tours.length,//tours is a array so it make sense 
+        requestedAT: req.requestTime,
         data:{
             tour
         }
@@ -62,6 +67,26 @@ app.patch('/api/v1/tours/:id',(req,res)=>{
         }
     })
 })
+app.delete('/api/v1/tours/:id',(req,res)=>{
+    const id = req.params.id*1;
+     if(id>tours.length){
+        return res.status(404).json({
+            status : "Fail",
+            message : "Inavlid id"
+        });
+    }
+    res.status(202).json({// no data status code
+        status : 'Success',
+        data :{
+            tour : "NO data"
+        }
+    })
+})
+/*app
+.route('/api/v1/tours/:id')
+.get(getTour)
+.patch(patchTour)
+.delete(deleteTour);*/
 const port = 3000;
 app.listen(port,()=>{//for sending the request
     console.log(`App running on ${port}`);
