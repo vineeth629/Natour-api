@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+const morgan = require('morgan');
 app.use(express.json());
+app.use(morgan('dev'));
 /*app.get('/',(req,res)=>{//for receiving the request
     res.status(200).send("Hello from the server");//res.status() is for status 
 })
