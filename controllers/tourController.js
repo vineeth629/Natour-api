@@ -2,7 +2,23 @@ const Tour = require('./../models/tourModel.js');
 
 exports.getAllTours = async (req, res) => {
   try{
-  const tours = await Tour.find()
+  //build query 
+  const queryObj = {...req.query}//this createes a shallow copy 
+  const excludeFields = ['page','sort','limit','fields'];
+  excludeFields.forEach(el=> delete queryobj[el])
+  console.log(req.query,queryObj);
+
+  const query =  Tour.find(queryobj);
+
+    /*const tours = await Tour.find()
+    .where('duration')
+    .equals(5)
+    .where('difficult')
+    .equals('easy'); all of this are part of query prototype of mongoose
+*/
+  //execute query 
+  const tours = await query ;
+  //send response
   res.status(200).json({
     status: 'success',
     results: tours.length,

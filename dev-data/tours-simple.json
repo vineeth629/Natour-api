@@ -78,5 +78,41 @@
     "summary": "A challenging trek around a spectacular volcano.",
     "description": "Take on a demanding volcanic trek with incredible landscapes and unforgettable views.",
     "imageCover": "tour-8-cover.jpg"
+  },
+  {
+    "id": 1,
+    "name": "The Forest Hiker",
+    "duration": 5,
+    "difficulty": "easy",
+    "price": 397,
+    "summary": "A beautiful hike through the forest with amazing views.",
+    "description": "Explore peaceful forest trails and enjoy the natural beauty of the mountains.",
+    "imageCover": "tour-1-cover.jpg"
+  },
+  {
+    "id": 2,
+    "name": "The Forest Hiker",
+    "duration": 5,
+    "difficulty": "easy",
+    "price": 397,
+    "summary": "A beautiful hike through the forest with amazing views.",
+    "description": "Explore peaceful forest trails and enjoy the natural beauty of the mountains.",
+    "imageCover": "tour-1-cover.jpg"
+  },
+  {
+    "id": 3,
+    "name": "The Forest Hiker",
+    "duration": 5,
+    "difficulty": "easy",
+    "price": 397,
+    "summary": "A beautiful hike through the forest with amazing views.",
+    "description": "Explore peaceful forest trails and enjoy the natural beauty of the mountains.",
+    "imageCover": "tour-1-cover.jpg"
+  },
+  {
+    "id": 4
+  },
+  {
+    "id": 5
   }
 ]
