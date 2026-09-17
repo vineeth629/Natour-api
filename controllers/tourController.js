@@ -3,13 +3,19 @@ const Tour = require('./../models/tourModel.js');
 exports.getAllTours = async (req, res) => {
   try{
   //build query 
+  //1)Filtering
   const queryObj = {...req.query}//this createes a shallow copy 
   const excludeFields = ['page','sort','limit','fields'];
   excludeFields.forEach(el=> delete queryobj[el])
   console.log(req.query,queryObj);
 
-  const query =  Tour.find(queryobj);
-
+  //2)Advnced filtering 
+  let  queryStr = JSON.stringify(queryObj);
+  queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g,match => `$${match}`);//Example of regular expression
+  console.log(JSON.parse(queryStr));
+  
+  const query = Tour.find(JSON.parse(queryStr));
+    //{ difficulty : 'easy',duration : {gte: 5}}
     /*const tours = await Tour.find()
     .where('duration')
     .equals(5)
